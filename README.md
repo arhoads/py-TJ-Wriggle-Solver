@@ -3,7 +3,7 @@ py-TJ-Wriggle Solver
 
 A messy solver for TJ-Wriggle using A* search that reads in a puzzle file through command line. More information on the TJ-Wriggle puzzle [here](http://www.clickmazes.com/tjwrig/ixjwrig.htm)
 
-Only tested with Python 3.
+Only tested with Python 3. The library [pyTree](https://github.com/caesar0301/pyTree) is modified and included in this repo. 
 
 ##How to Run
 Install requirements
