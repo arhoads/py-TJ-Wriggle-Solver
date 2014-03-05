@@ -1,7 +1,7 @@
 py-TJ-Wriggle Solver
 =================
 
-A solver for TJ-Wriggle using A* search that reads in a puzzle file through command line. More information on the TJ-Wriggle puzzle [here](http://www.clickmazes.com/tjwrig/ixjwrig.htm)
+A messy solver for TJ-Wriggle using A* search that reads in a puzzle file through command line. More information on the TJ-Wriggle puzzle [here](http://www.clickmazes.com/tjwrig/ixjwrig.htm)
 
 Only tested with Python 3.
 
