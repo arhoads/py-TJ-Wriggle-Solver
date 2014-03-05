@@ -1,0 +1,6 @@
+5 5 4
+x x D x x
+x 1 < D x
+2 < e > 0
+x U v L x
+x x 3 e e
