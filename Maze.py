@@ -6,8 +6,7 @@ import static
 import util
 import math
 
-from treelib import *
-from node import Node
+from treelib import Node, Tree
 from pqdict import PQDict
 
 
