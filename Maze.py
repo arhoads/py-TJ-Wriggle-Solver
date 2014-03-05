@@ -230,7 +230,6 @@ class Maze:
             for move in moves:
                 actions.append(Action(wrigglerID=i, movedCoord=move[0], headMoved=move[1]))
 
-        self.clearMaze()
         return actions
 
     def updateAllMaze(self, wrigglers, bNot0=False):
