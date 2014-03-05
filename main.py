@@ -6,19 +6,22 @@ import time
 from Maze import *
 import static
 import util
-
+import os
 
 puzzle = 'puzzle1.txt'
+folder = "puzzles/"
 
 override_puzzle = sys.argv[1:]
 if override_puzzle:
     puzzle = str(override_puzzle[0])
+	
+puzzle_path = os.path.normcase(folder + puzzle)
 
 print("Using puzzle file: " + puzzle)
 
 # Check to see if file exists, if not exit
 try:
-    with open(puzzle):
+    with open(puzzle_path):
         pass
 except IOError:
     print(puzzle + " does not exist. Quiting program")
@@ -26,7 +29,7 @@ except IOError:
 
 start = time.clock()
 
-maze = Maze(puzzle)
+maze = Maze(puzzle_path)
 solNode = maze.a_star_normal()
 
 end = time.clock()
@@ -47,7 +50,14 @@ boardStr = util.printBoard()
 
 print("\nTime elapsed: " + timeDelta + " (seconds)")
 
+
 solText += boardStr + timeDelta + "\n" + str(solveLength) + "\n"
-filename = "solution_" + puzzle
-with open(filename, 'w') as file:
+solution_dir = "solutions/"
+solution_name = "solution_" + puzzle
+solution_path = os.path.normcase(solution_dir + solution_name)
+
+if not os.path.exists(solution_dir):
+    os.makedirs(solution_dir)
+	
+with open(solution_path, 'w') as file:
     file.write(solText)
